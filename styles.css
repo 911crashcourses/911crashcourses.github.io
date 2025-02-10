@@ -1,0 +1,488 @@
+/* Custom Styles for 911 Crash Courses Website */
+
+/* Welcome Section Styles */
+#welcome {
+  /* Set a background color */
+  color: #fff;
+  padding: 100px 0;
+}
+
+.welcome-animation {
+  animation: fadeInUp 1.5s ease-in-out;
+  background: linear-gradient(135deg, #333333, #0074E4);
+  padding: 20px; /* Add padding to make the text stand out */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 20px; /* Add space between animations */
+}
+
+.welcome-title {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif; /* Apply the Montserrat font */
+  line-height: 1.2;
+  color: #fff; /* White text color */
+}
+
+.highlight {
+  color: #c7c7c7; /* Green color for 911 */
+}
+
+.course-title {
+  color: #fff; /* White color for Crash Courses */
+}
+
+.italic-text {
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add general styles here */
+body {
+  background: linear-gradient(135deg, #20232a, #2c3e50);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply Montserrat font to headings */
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+}
+
+/* Logo in the Navbar */
+.logo-img {
+  width: 300px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none; /* Remove the default underline */
+  transition: text-decoration 0.3s; /* Add a smooth transition for text-decoration */
+}
+
+/* Hover effect for the Register Here button */
+.navbar-nav .nav-link.btn-primary:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+  
+}
+
+/* What's Hot Section */
+#hot {
+  position: relative;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+#hot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/einstein.jpg') no-repeat center center/cover;
+  filter: brightness(50%); /* Darken the background slightly for readability */
+  z-index: -1;
+}
+
+/* Ensure only the background image is shown */
+#hot img {
+  display: none; /* Hide any foreground images inside #hot */
+}
+
+#hot .hot-content {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+#hot h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#hot p {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Scroll Animation */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CSS Styles for About Us Section */
+#about {
+  color: #fff; /* Set text color to white */
+  display: flex;
+  align-items: center; /* Aligns text and image properly */
+  justify-content: center;
+}
+
+#about .row {
+  display: flex;
+  align-items: center;
+}
+
+#about img {
+  border-radius: 12px; /* Adds rounded corners */
+  max-width: 100%;
+  height: auto;
+}
+
+#about .about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensures text aligns properly */
+  height: 100%; /* Matches image height */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .row {
+    flex-direction: column;
+  }
+
+  #about img {
+    width: 100%;
+    margin-bottom: 15px; /* Adds space below image */
+  }
+
+  #about .about-text {
+    height: auto; /* Allows flexibility on small screens */
+  }
+}
+
+
+/* Services and Products Section */
+/* #services, #products {
+    background-color: #fff;
+  } */
+
+/* Our Services Section Styles */
+#services {
+  background-color: #000;
+}
+
+.service-box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-box i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.service-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.service-box p {
+  font-size: 16px;
+  color: #ddd;
+}
+
+/* Contact Us Section */
+#contact {
+  background-color: #f4f4f4;
+}
+
+/* Supported Institutions Section Styles */
+#supported {
+  background: linear-gradient(135deg, #2c3e50, #20232a);
+  padding: 100px 0;
+  color: #f4f4f4;
+}
+
+.institution-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.institution-block {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  background: linear-gradient(135deg, #333333, #0074E4);
+
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto; /* Maintain the aspect ratio of the images */
+  width: 80%; 
+}
+
+.institution-block:hover {
+  transform: translateY(-5px);
+}
+
+.institution-logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.institution-name {
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+  #supported .institution-block img {
+    width: 100%; /* Make the images take up the full width of their container on smaller screens */
+  }
+}
+
+/* Footer Styles */
+
+/* Footer */
+/* Footer */
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Make the columns equal in height */
+  flex-wrap: wrap;
+}
+
+.footer-box {
+  flex: 1;
+  padding: 20px;
+  /* border: 1px solid #fff; */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  /* margin-bottom: 37px; */
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #007bff;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .social-icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+  }
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Meet the Tutors Section */
+#tutors {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+#tutors .rounded-circle {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+/* FAQ Section */
+#faq .card-header {
+  background-color: #007bff;
+  color: white;
+}
+
+#faq .btn-link {
+  color: white;
+  text-decoration: none;
+}
+
+#faq .btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Meet the Tutors Section */
+#tutors {
+  background-color: #222;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+#tutors .rounded-circle {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+#tutors h4 {
+  color: #ffcc00;
+}
+
+/* FAQ Section */
+#faq {
+  background-color: #111;
+  color: #ffffff;
+}
+
+#faq .card {
+  background-color: #222;
+  color: white;
+}
+
+#faq .card-header {
+  background-color: #ffcc00;
+  color: black;
+}
+
+#faq .btn-link {
+  color: black;
+  font-weight: bold;
+}
+
+#faq .btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Navbar Fix for Mobile Screens */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures logo and toggle button are spaced out */
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  .navbar-brand {
+    flex-grow: 1; /* Allows the logo to take up available space */
+    max-width: 70%; /* Ensures logo does not take too much space */
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 10px; /* Moves the button further to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Centers it vertically */
+  }
+}
